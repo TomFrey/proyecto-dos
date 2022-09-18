@@ -1,0 +1,31 @@
+.wrapper{
+  .header{
+    nav{
+      background-color: red;
+    }
+  }
+}
+  
+  
+  /* ************************************************************* */
+  /* *********** ab hier für mobile querformat ******************* */
+  @media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+   
+  }
+  
+  
+  /* *************************************************** */
+  /* *********** ab hier für desktop ******************* */
+  @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+   
+  }
+  
+  
+  /* *************************************************** */
+  /* *********** ab hier für desktop ******************* */
+  @media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+   
+  }
+  
+  
+  

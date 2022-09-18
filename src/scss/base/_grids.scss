@@ -1,0 +1,88 @@
+.gridx12 {
+	display: grid;
+	grid: [Zeile1] "row1 row1 row1 row1 row1 row1 row1 row1 row1 row1 row1 row1" auto [Zeile1Ende]
+                   / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-row-gap: 2*$basicWidth;
+    grid-column-gap: 2*$basicWidth;
+   
+    margin: $basicHeight $basicWidth;
+}
+
+.gridx12-header {
+	display: grid;
+	grid: [Zeile1] "row1 row1 row1 row1 row1 row1 row1 row1 row1 row1 row1 row1" auto [Zeile1Ende]
+                   / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-row-gap: 2*$basicWidth;
+    grid-column-gap: 2*$basicWidth;
+   
+    margin: 0 $basicWidth;
+}
+
+.gridx12__one--col1of1{
+    grid-area: 1 / 1 / 2 / 13;
+}
+
+.gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2{
+    grid-area: 1 / 1 / 2 / 13;
+}
+
+.gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2{
+    grid-area: 2 / 1 / 3 / 13;
+}
+
+.gridx12__oneCol--col1of1{
+    grid-area: 1 / 1 / 2 / 13;
+}
+
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+    .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2{
+        grid-area: 1 / 1 / 2 / 7;
+    }
+    
+    .gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2{
+        grid-area: 1 / 7 / 2 / 13;
+    }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+    
+    .gridx12 {
+        grid-column-gap: 4*$basicWidth;
+        margin: 2*$basicHeight 2*$basicWidth;
+    }
+
+    .gridx12-header {
+        grid-column-gap: 4*$basicWidth;
+        margin: 0 2*$basicWidth;
+    }
+
+    .gridx12__threeToOne--col1of2{
+		grid-area: 1 / 1 / 2 / 10;
+	}
+
+	.gridx12__threeToOne--col2of2{
+		grid-area: 1 / 10 / 2 / 13;
+	}
+
+    .gridx12__twoToOne--col1of2, .gridx12__one--col1of1{
+		grid-area: 1 / 1 / 2 / 9;
+	}
+
+	.gridx12__twoToOne--col2of2{
+		grid-area: 1 / 9 / 2 / 13;
+	}
+
+    .gridx12__oneToOne--col1of2{
+		grid-area: 1 / 1 / 2 / 7;
+	}
+
+	.gridx12__oneToOne--col2of2{
+		grid-area: 1 / 7 / 2 / 13;
+	}
+}

@@ -1,0 +1,65 @@
+/*** media breakpoints ***/
+$breakpoint-large: 1050px;
+$breakpoint-medium: 440px;
+
+
+/*** fonts ***/
+$titleFont: "Alegreya Sans SC", "Arial", "sans-serif";
+$navigationFont: "Alegreya Sans", "Arial", "sans-serif";
+$standardTextFont: "Alegreya Sans", "Arial", "sans-serif";
+
+
+/*** colors ***/
+$standardTextColor: #000000;
+$standardBackgroundColor: #FFFFFF;
+$titleBackgroundColor: rgba($standardBackgroundColor, 0.8);
+$navBackgroundColor: $standardBackgroundColor;
+
+
+/*** sizes ***/
+$maxWidth: 1600px;
+$imageSliderWidth: 1000px;
+$standardFontSize: 16px;
+$basicWidth: 8px;
+$basicHeight: 8px;
+$textSize: 1rem;
+$titleSize: 3.0rem;
+$navigationSize: 1.4rem;
+$heightHeader: 7*$basicHeight;
+$heightNavigation: 7*$basicHeight;
+
+
+@mixin titleTextFont(){
+	color: $standardTextColor;
+	font-family: $titleFont;
+	font-size: $titleSize;
+	font-weight: 100;
+}
+
+@mixin navigationTextFont(){
+	color: $standardTextColor;
+	font-family: $navigationFont;
+	font-size: $navigationSize;
+	font-weight: 300;
+}
+
+@mixin navigationSelectedTextFont(){
+	color: $standardTextColor;
+	font-family: $navigationFont;
+	font-size: 1.2*$navigationSize;
+	font-weight: 400;
+}
+
+@mixin pageTitleTextFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+@mixin standardTextFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.1rem;
+	font-weight: 300;
+}
