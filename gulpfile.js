@@ -231,7 +231,7 @@ const allJsFiles = [
 
 const getFtpTestConnection = () => {
 	return ftp.create({
-		host: 'arnelas.mitlinxlernen.ch',
+		host: 'proyecto-cero.rhiifresh.ch',
 		port: 21,
 		user: configFile.config.testFtp.user,
 		password: configFile.config.testFtp.pass,
@@ -243,7 +243,7 @@ const getFtpTestConnection = () => {
 
 const getFtpProductionConnection = () => {
 	return ftp.create({
-		host: 'e129832-ftp.services.easyname.eu',
+		host: 'xyz.xyz.ch',
 		port: 21,
 		user: configFile.config.productionFtp.user,
 		password: configFile.config.productionFtp.pass,
