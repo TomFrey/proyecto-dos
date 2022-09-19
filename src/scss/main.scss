@@ -54,7 +54,7 @@ body{
   }
 
   header{
-    background-color: $titleBackgroundColor;
+    background-color: #E87688;
 
     .title{
       @include titleTextFont();
@@ -66,11 +66,12 @@ body{
   }
 
   nav{
-    background-color: $titleBackgroundColor;
+    background-color: #F27CC9;
     @include navigationTextFont();
   }
 
   main{
+    background-color: #C87CF2;
     grid-area: 3 / 1 / 4 / 2;
     
     .page-item{
