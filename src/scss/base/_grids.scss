@@ -22,6 +22,13 @@
     grid-area: 1 / 1 / 2 / 13;
 }
 
+.gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2,
+.gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2 {
+    background-color: $textContainerColor;
+    border-radius: $basicHeight;
+    padding: $basicHeight 0.5*$basicWidth;
+}
+
 .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2{
     grid-area: 1 / 1 / 2 / 13;
 }
@@ -61,6 +68,11 @@
         grid-column-gap: 4*$basicWidth;
         margin: 0 2*$basicWidth;
     }
+
+    .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2,
+    .gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2 {
+    padding: $basicHeight $basicWidth;
+}
 
     /*
         |                  |      |

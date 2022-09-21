@@ -7,6 +7,7 @@
  */
 @import "base/reset";
 @import "base/specifications";
+@import "base/grids";
 
 /**
  * Components
@@ -94,10 +95,21 @@ body{
   }
 }
 
-section{
-  padding: 4*$basicHeight;
+section.text-item{
   background-color: #ffffff;
   color: #000000;
+  padding-top: $basicHeight;
+  padding-bottom: 2*$basicHeight;
+
+  h2{
+    @include pageTitleH2TextFont();
+    padding: 2*$basicHeight 0;
+  }
+
+  h3{
+    @include pageTitleH3TextFont();
+    padding: $basicHeight 0;
+  }
 }
 
 
@@ -117,6 +129,9 @@ footer{
 /* *************************************************** */
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+  section.text-item{
+    padding: 4*$basicHeight;
+  }
 }
 
 

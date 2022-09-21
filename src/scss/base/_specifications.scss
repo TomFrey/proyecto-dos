@@ -12,6 +12,7 @@ $standardTextFont: "Alegreya Sans", "Arial", "sans-serif";
 /*** colors ***/
 $standardTextColor: #000000;
 $standardBackgroundColor: #FFFFFF;
+$textContainerColor: #E6F1F2;
 $titleBackgroundColor: rgba($standardBackgroundColor, 0.8);
 $navBackgroundColor: $standardBackgroundColor;
 
@@ -50,7 +51,14 @@ $heightNavigation: 7*$basicHeight;
 	font-weight: 400;
 }
 
-@mixin pageTitleTextFont(){
+@mixin pageTitleH2TextFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+@mixin pageTitleH3TextFont(){
 	color: $standardTextColor;
 	font-family: $standardTextFont;
 	font-size: 1.3rem;
