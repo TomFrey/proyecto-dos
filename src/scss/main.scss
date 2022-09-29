@@ -85,17 +85,20 @@ body{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    text-align: center;
     color: white;
     text-shadow: 0 0 5px black;
   }
 
   .title{
-    font-size: 7rem;
+    font-size: 3rem;
+    line-height: 0.8;
+    word-wrap: break-word;
   }
 
   .subtitle{
-    font-size: 4rem;
-    margin-top: 7*$basicHeight;
+    font-size: 2rem;
+    margin-top: 4*$basicHeight;
   }
 }
 
@@ -126,7 +129,18 @@ footer{
 /* ************************************************************* */
 /* *********** ab hier für mobile querformat ******************* */
 @media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
-
+  .parallax-item{
+   
+    .title{
+      font-size: 5rem;
+      line-height: unset;
+    }
+  
+    .subtitle{
+      font-size: 3rem;
+      margin-top: 5*$basicHeight;
+    }
+  }
 }
 
 
@@ -142,4 +156,15 @@ footer{
 /* *************************************************** */
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+  .parallax-item{
+   
+    .title{
+      font-size: 7rem;
+    }
+  
+    .subtitle{
+      font-size: 4rem;
+      margin-top: 8*$basicHeight;
+    }
+  }
 }
