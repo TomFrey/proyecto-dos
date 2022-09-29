@@ -36,6 +36,10 @@ body{
 	line-height: 1.25rem;
 }
 
+.wrapper-body{
+  margin: 0 auto;
+  max-width: $maxWidth;
+}
 
 .stickyHeader-wrapper{
   position: sticky;

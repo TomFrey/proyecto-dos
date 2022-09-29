@@ -1,15 +1,17 @@
 nav{
-  grid-area: 2 / 1 / 3 / 2;
+  // grid-area: 2 / 1 / 3 / 2;
   background-color: $navBackgroundColor;
 
   ul{
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     margin: 1.5*$basicHeight 0 2*$basicHeight 0;
 
     li{
       list-style: none;
+      padding: $basicHeight 0;
 
       a{
         color: $standardTextColor;
@@ -21,11 +23,6 @@ nav{
         @include navigationSelectedTextFont();
       }
     }
-
-    li:first-of-type{
-      padding: 0 0 0 16px;
-    }
-
   }
 }
   
@@ -35,14 +32,12 @@ nav{
   @media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
     nav{
       ul{
+        flex-flow: row nowrap;
+
         li{
           a{
             padding: 0.5*$basicHeight 1.5*$basicWidth;
           }
-        }
-  
-        li:first-of-type{
-          padding: 0 0 0 20px;
         }
       }
     }
@@ -53,11 +48,11 @@ nav{
   /* *********** ab hier für desktop ******************* */
   @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
     nav{
-      grid-area: 2 / 2 / 3 / 3;
+      // grid-area: 2 / 2 / 3 / 3;
     
       ul{
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         margin: 2vw 0 0 0;
   
         li{
