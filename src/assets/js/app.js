@@ -6,7 +6,8 @@ const App = (function () {
 
   /**** wird nach dem DOM ready ausgeführt ****/
   function init(){
-   
+    console.log('inside App.init()');
+    Animation.init();
   };
 
   //public api

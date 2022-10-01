@@ -13,6 +13,7 @@
  * Components
  */
 @import "components/navigation";
+@import "components/animation";
 
 
 /* Border Box Trick */
@@ -93,7 +94,6 @@ body{
   .title{
     font-size: 3rem;
     line-height: 0.8;
-    word-wrap: break-word;
   }
 
   .subtitle{
@@ -117,6 +117,25 @@ section.text-item{
     @include pageTitleH3TextFont();
     padding: $basicHeight 0;
   }
+}
+
+.separator-top, .separator-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+  width: 100%;
+  //border: solid 1px red;
+}
+
+.separator-top{
+  padding-top: $basicHeight;
+  height: 150px;
+}
+
+.separator-bottom{
+  height: 200px;
 }
 
 
