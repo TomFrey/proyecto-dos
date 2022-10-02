@@ -14,6 +14,7 @@
  */
 @import "components/navigation";
 @import "components/animation";
+@import "components/text-section";
 
 
 /* Border Box Trick */
@@ -102,22 +103,22 @@ body{
   }
 }
 
-section.text-item{
-  background-color: #ffffff;
-  color: #000000;
-  padding-top: $basicHeight;
-  padding-bottom: 2*$basicHeight;
+// section.text-item{
+//   background-color: #ffffff;
+//   color: #000000;
+//   padding-top: $basicHeight;
+//   padding-bottom: 2*$basicHeight;
 
-  h2{
-    @include pageTitleH2TextFont();
-    padding: 2*$basicHeight 0;
-  }
+//   h2{
+//     @include pageTitleH2TextFont();
+//     padding: 2*$basicHeight 0;
+//   }
 
-  h3{
-    @include pageTitleH3TextFont();
-    padding: $basicHeight 0;
-  }
-}
+//   h3{
+//     @include pageTitleH3TextFont();
+//     padding: $basicHeight 0;
+//   }
+// }
 
 .separator-top, .separator-bottom{
   display: flex;

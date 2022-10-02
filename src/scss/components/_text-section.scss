@@ -1,0 +1,66 @@
+section.text-item{
+    background-color: #ffffff;
+    color: #000000;
+    padding-top: $basicHeight;
+    padding-bottom: 2*$basicHeight;
+  
+    h2{
+      @include pageTitleH2TextFont();
+      padding: 2*$basicHeight 0;
+    }
+  
+    h3{
+      @include pageTitleH3TextFont();
+      padding: $basicHeight 0;
+    }
+}
+
+.bild-text-container{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2%;
+}
+
+.bild-text-container-left{
+    flex: 0 1 50%;
+    order: 0;
+}
+    
+.bild-text-container-right{
+    flex: 0 1 50%;
+    order: 1;
+}
+
+.bild-text-container-picture{
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+    .bild-text-container{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+
+/* *************************************************** */
+/* ****** ab hier für desktop (maximale Grösse) ****** */
+@media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+    
+}
+    
+    
+    

@@ -233,7 +233,7 @@ const allJsFiles = [
 
 const getFtpTestConnection = () => {
 	return ftp.create({
-		host: 'proyecto-cero.rhiifresh.ch',
+		host: 'kajakschule.rhiifresh.ch',
 		port: 21,
 		user: configFile.config.testFtp.user,
 		password: configFile.config.testFtp.pass,
