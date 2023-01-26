@@ -17,6 +17,7 @@ $titleBackgroundColor: rgba($standardBackgroundColor, 0.8);
 $navBackgroundColor: $standardBackgroundColor;
 $footerBackgroundColor:  #000000;
 $footerTextColor: #FFFFFF;
+$linkColor: #1348F0;
 
 
 /*** sizes ***/
@@ -72,6 +73,13 @@ $heightNavigation: 7*$basicHeight;
 	font-family: $standardTextFont;
 	font-size: 1.1rem;
 	font-weight: 300;
+}
+
+@mixin linkTextFont(){
+	color: $linkColor;
+	font-family: $standardTextFont;
+	font-size: 1.2rem;
+	font-weight: 400;
 }
 
 @mixin footerTextFont(){

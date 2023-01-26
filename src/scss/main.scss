@@ -104,6 +104,13 @@ body{
   }
 }
 
+section.text-item{
+
+  a{
+    @include linkTextFont();
+  }
+}
+
 // section.text-item{
 //   background-color: #ffffff;
 //   color: #000000;
@@ -187,6 +194,10 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
 
   section.text-item{
     padding: 4*$basicHeight;
+
+    a:hover{
+      color: $standardTextColor;
+    }
   }
   
   footer{
