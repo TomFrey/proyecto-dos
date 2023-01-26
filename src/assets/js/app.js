@@ -8,6 +8,7 @@ const App = (function () {
   function init(){
     console.log('inside App.init()');
     Animation.init();
+    Navigation.init();
   };
 
   //public api

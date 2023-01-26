@@ -1,28 +1,71 @@
 nav{
-  // grid-area: 2 / 1 / 3 / 2;
   background-color: $navBackgroundColor;
+  overflow: hidden; //verhindert, dass die margin top und bottom in der Navigation verschwinden
 
-  ul{
+  #hamburger {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 6px;
+  
+    .hamburger__line-1 rect, .hamburger__line-2 rect, .hamburger__line-3 rect{
+      transition: transform 0.3s ease-in-out 1ms;
+    }
+  }
+
+  #hamburger.js-close-nav-button{
+    .hamburger__line-1 rect{
+      transform: translateX(9px) translateY(-3px) rotate(45deg);
+      transition: transform 0.5s ease-in-out 1ms;
+    }
+  
+    .hamburger__line-2 rect{
+      transform: translateX(-50px);
+      transition: transform 0.5s ease-in-out 1ms;
+    }
+  
+    .hamburger__line-3 rect{
+      transform: translateX(-24px) translateY(14px) rotate(-45deg);
+      transition: transform 0.5s ease-in-out 1ms;
+    }
+  }
+
+
+  ul.navi-desktop{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    margin: 1.5*$basicHeight 0 2*$basicHeight 0;
+    height: 180px;
+    transition: height 0.5s ease-in-out 1ms;
+
+    li:not(:last-of-type){
+      border-bottom: 1px solid $standardTextColor;
+    }
 
     li{
       list-style: none;
       padding: $basicHeight 0;
+      width: 200px;
 
       a{
         color: $standardTextColor;
         text-decoration: none;
         padding: 0.5*$basicHeight 0.75*$basicWidth;
+        display: inline-block;
+        width: 100%;
       }
 
       a.js-isSelected{
         @include navigationSelectedTextFont();
       }
     }
+  }
+
+  ul.navi-desktop.js-hide {
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.5s ease-in-out 1ms;
   }
 }
   
@@ -31,13 +74,31 @@ nav{
   /* *********** ab hier für mobile querformat ******************* */
   @media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
     nav{
-      ul{
+      #hamburger {
+        display: none;
+      }
+
+      ul.navi-desktop, ul.navi-desktop.js-hide{
+        display: flex;
         flex-flow: row nowrap;
+        margin: 1.5*$basicHeight 0 2*$basicHeight 0;
+        overflow: auto;
+        height: auto;
+        transition: none;
 
         li{
+          border-bottom: none;
+          width: auto;
+
           a{
             padding: 0.5*$basicHeight 1.5*$basicWidth;
+            display: inline;
+            width: auto;
           }
+        }
+
+        li:not(:last-of-type){
+          border-bottom: none;
         }
       }
     }
@@ -48,17 +109,16 @@ nav{
   /* *********** ab hier für desktop ******************* */
   @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
     nav{
-      // grid-area: 2 / 2 / 3 / 3;
     
-      ul{
+      ul.navi-desktop, ul.navi-desktop.js-hide{
         display: flex;
         justify-content: center;
-        margin: 2vw 0 0 0;
   
         li{
           padding: $basicHeight calc(-8px + 2%);
   
           a{
+            @include navigationTextFont();
             padding: 0.5*$basicHeight $basicWidth;
           }
     
@@ -83,7 +143,7 @@ nav{
   /* *********** ab hier für desktop ******************* */
   @media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
     nav{  
-      ul{
+      ul.navi-desktop, ul.navi-desktop.js-hide{
         li{
           padding: $basicHeight 2.5*$basicWidth;
         }
