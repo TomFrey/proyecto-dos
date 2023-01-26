@@ -144,7 +144,7 @@ body{
 
 footer{
   @include footerTextFont();
-  margin: 0px 4*$basicWidth;
+ 
   background-color: $standardBackgroundColor;
 
   a{
@@ -180,6 +180,8 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
   footer{
+    margin: 0px 4*$basicWidth;
+
     li a:hover{
       color: darken($footerTextColor, 25%);
     }
