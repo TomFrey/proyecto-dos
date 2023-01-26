@@ -164,12 +164,12 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
   .parallax-item{
    
     .title{
-      font-size: 5rem;
+      font-size: 3.5rem;
       line-height: unset;
     }
   
     .subtitle{
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-top: 5*$basicHeight;
     }
   }
@@ -179,16 +179,22 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
 /* *************************************************** */
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+  .parallax-item{
+    .title{
+      font-size: 5rem;
+    }
+  }
+
+  section.text-item{
+    padding: 4*$basicHeight;
+  }
+  
   footer{
     margin: 0px 4*$basicWidth;
 
     li a:hover{
       color: darken($footerTextColor, 25%);
     }
-  }
-  
-  section.text-item{
-    padding: 4*$basicHeight;
   }
 }
 
