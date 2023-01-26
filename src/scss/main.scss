@@ -132,17 +132,28 @@ body{
 
 .separator-top{
   padding-top: $basicHeight;
-  height: 150px;
+  //height: 150px;
+  height: 25vh;
 }
 
 .separator-bottom{
-  height: 200px;
+  //height: 200px;
+  height: 25vh;
 }
 
 
 footer{
-  height: 300px;
-  background-color: yellow;
+  @include footerTextFont();
+  margin: 0px 4*$basicWidth;
+  background-color: $standardBackgroundColor;
+
+  a{
+    color: $footerTextColor;
+  }
+}
+
+footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
+  background-color: $footerBackgroundColor;
 }
 
 
@@ -168,10 +179,17 @@ footer{
 /* *************************************************** */
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+  footer{
+    li a:hover{
+      color: darken($footerTextColor, 25%);
+    }
+  }
+  
   section.text-item{
     padding: 4*$basicHeight;
   }
 }
+
 
 
 /* *************************************************** */
