@@ -3,7 +3,7 @@
 class DB
 {
 	private static $SERVERNAME = "localhost";
-	private static $DB_NAME = "chooseOne";
+	private static $DB_NAME = "joy_of_whitewater";
 	private static $USERNAME = "rootuser";
 	private static $PASSWORD = "rootpw";
 

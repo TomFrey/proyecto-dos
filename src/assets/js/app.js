@@ -9,6 +9,15 @@ const App = (function () {
     console.log('inside App.init()');
     Animation.init();
     Navigation.init();
+
+    // alle Kursdaten laden
+    Courses.loadAndRender()
+    .then(() => {
+      console.log('Kurse geladen');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   };
 
   //public api

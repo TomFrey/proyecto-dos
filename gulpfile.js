@@ -20,6 +20,11 @@ const configFile = require('./config.js');
 
 /* Alle verwendeten JS Files, damit das eine JS File zusammengesetzt werden kann. */
 const allJsFiles = [
+	'./src/assets/js/util/dates.js',
+	
+	'./src/assets/js/services/ajaxService.js',
+	'./src/assets/js/services/getCourses.js',
+
 	'./src/assets/js/guiControll/animation.js',
 	'./src/assets/js/guiControll/navigation.js',
 
