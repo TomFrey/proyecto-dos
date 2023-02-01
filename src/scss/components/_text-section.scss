@@ -13,6 +13,18 @@ section.text-item{
       @include pageTitleH3TextFont();
       padding: $basicHeight 0;
     }
+
+    p:not(:last-of-type){
+        margin-bottom: $basicHeight;
+    }
+
+    a{
+        @include linkTextFont();
+    }
+
+    strong{
+        font-weight: bold;
+    }
 }
 
 .bild-text-container{
@@ -49,6 +61,18 @@ section.text-item{
 /* *************************************************** */
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+    section.text-item{
+        padding: 4*$basicHeight;
+
+        p:not(:last-of-type){
+            margin-bottom: 2*$basicHeight;
+        }
+    
+        a:hover{
+          color: $standardTextColor;
+        }
+    }
+    
     .bild-text-container{
         display: flex;
         flex-flow: row nowrap;

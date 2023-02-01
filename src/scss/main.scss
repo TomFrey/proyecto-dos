@@ -111,30 +111,6 @@ body{
   }
 }
 
-section.text-item{
-
-  a{
-    @include linkTextFont();
-  }
-}
-
-// section.text-item{
-//   background-color: #ffffff;
-//   color: #000000;
-//   padding-top: $basicHeight;
-//   padding-bottom: 2*$basicHeight;
-
-//   h2{
-//     @include pageTitleH2TextFont();
-//     padding: 2*$basicHeight 0;
-//   }
-
-//   h3{
-//     @include pageTitleH3TextFont();
-//     padding: $basicHeight 0;
-//   }
-// }
-
 .separator-top, .separator-bottom{
   display: flex;
   align-items: center;
@@ -221,14 +197,6 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
     .subtitle{
       font-size: 4rem;
       margin-top: 10*$basicHeight;
-    }
-  }
-
-  section.text-item{
-    padding: 4*$basicHeight;
-
-    a:hover{
-      color: $standardTextColor;
     }
   }
 
