@@ -91,7 +91,9 @@ nav{
           width: auto;
 
           a{
-            padding: 0.5*$basicHeight 1.5*$basicWidth;
+            @include navigationTextFont();
+            font-size: 3vw;
+            padding: 0.5*$basicHeight 2*$basicWidth;
             display: inline;
             width: auto;
           }
@@ -115,7 +117,7 @@ nav{
         justify-content: center;
   
         li{
-          padding: $basicHeight calc(-8px + 2%);
+          padding: $basicHeight $basicWidth;
   
           a{
             @include navigationTextFont();
@@ -125,14 +127,6 @@ nav{
           a:hover{
             color: lighten($standardTextColor, 75%);
           }
-        }
-  
-        li:first-of-type{
-          padding: $basicHeight calc(-8px + 2%) $basicHeight $basicWidth;
-        }
-  
-        li:last-of-type{
-          padding: $basicHeight calc(-14px + 6%) $basicHeight calc(-8px + 2%);
         }
       }
     }
@@ -146,14 +140,6 @@ nav{
       ul.navi-desktop, ul.navi-desktop.js-hide{
         li{
           padding: $basicHeight 2.5*$basicWidth;
-        }
-  
-        li:first-of-type{
-          padding: $basicHeight 2.5*$basicWidth;
-        }
-  
-        li:last-of-type{
-          padding: $basicHeight 47px $basicHeight 2.5*$basicWidth;
         }
       }
     }
