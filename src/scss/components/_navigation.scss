@@ -45,13 +45,14 @@ nav{
 
     li{
       list-style: none;
-      padding: $basicHeight 0;
-      width: 200px;
+      padding: 0.5*$basicHeight 0;
+      width: 240px;
 
       a{
+        @include navigationTextFont();
         color: $standardTextColor;
         text-decoration: none;
-        padding: 0.5*$basicHeight 0.75*$basicWidth;
+        padding: $basicHeight 0.75*$basicWidth;
         display: inline-block;
         width: 100%;
       }
@@ -121,6 +122,7 @@ nav{
   
           a{
             @include navigationTextFont();
+            font-size: 2.2vw;
             padding: 0.5*$basicHeight $basicWidth;
           }
     
@@ -140,6 +142,10 @@ nav{
       ul.navi-desktop, ul.navi-desktop.js-hide{
         li{
           padding: $basicHeight 2.5*$basicWidth;
+
+          a{
+            font-size: 2rem;
+          }
         }
       }
     }
