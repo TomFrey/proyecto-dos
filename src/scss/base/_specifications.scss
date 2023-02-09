@@ -88,3 +88,10 @@ $heightNavigation: 7*$basicHeight;
 	font-size: 1.5rem;
 	font-weight: 400;
 }
+
+@mixin offersLinkTextFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.3rem;
+	font-weight: 300;
+}

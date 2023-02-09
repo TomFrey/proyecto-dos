@@ -107,7 +107,29 @@ body{
   .subtitle{
     font-size: 2.5rem;
     line-height: 2.5rem;
+    margin-top: 2*$basicHeight;
+  }
+
+  .offers-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    margin-top: 2*$basicHeight;
+  }
+
+  .offers-item{
     margin-top: 4*$basicHeight;
+  }
+
+  .offers-link{
+    @include offersLinkTextFont();
+    text-shadow: none;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    border-radius: $basicHeight;
+    text-decoration: none;
+    margin: $basicHeight $basicWidth;
+    padding: $basicHeight $basicWidth;
   }
 }
 
@@ -118,7 +140,6 @@ body{
   text-align: center;
   background-color: #ffffff;
   width: 100%;
-  //border: solid 1px red;
 }
 
 .separator-top{
@@ -169,7 +190,20 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
   
     .subtitle{
       font-size: 2.5rem;
+      margin-top: 2*$basicHeight;
+    }
+
+    .offers-wrapper{
+      margin-top: 2*$basicHeight;
+    }
+
+    .offers-item{
       margin-top: 5*$basicHeight;
+    }
+
+    .offers-link{
+      font-size: 1.7rem;
+      font-weight: 300;
     }
   }
 
@@ -196,7 +230,29 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
 
     .subtitle{
       font-size: 4rem;
-      margin-top: 10*$basicHeight;
+      margin-top: 4*$basicHeight;
+    }
+
+    .offers-wrapper{
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      text-align: center;
+      margin-top: 12*$basicHeight;
+    }
+
+    .offers-item:not(:last-of-type){
+      margin-right: 4*$basicWidth;
+    }
+
+    .offers-link{
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .offers-link:hover{
+      background-color: rgba($color: #000000, $alpha: 0.8);
+      color: #ffffff;
     }
   }
 
@@ -226,6 +282,10 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
   
     .subtitle{
       font-size: 5rem;
+      margin-top: 4*$basicHeight;
+    }
+
+    .offers-wrapper{
       margin-top: 12*$basicHeight;
     }
   }
