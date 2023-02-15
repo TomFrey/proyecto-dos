@@ -23,17 +23,18 @@
 }
 
 .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2,
-.gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2 {
+.gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2,
+.gridx12__oneCol--col1of1 {
     background-color: $textContainerColor;
     border-radius: $basicHeight;
     padding: $basicHeight 0.5*$basicWidth;
 }
 
-.gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2{
+.gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2, .gridx12__courseItemDetail--col1of2{
     grid-area: 1 / 1 / 2 / 13;
 }
 
-.gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2{
+.gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2, .gridx12__courseItemDetail--col2of2{
     grid-area: 2 / 1 / 3 / 13;
 }
 
@@ -45,11 +46,11 @@
 /* ************************************************************* */
 /* *********** ab hier für mobile querformat ******************* */
 @media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
-    .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2{
+    .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2, .gridx12__courseItemDetail--col1of2{
         grid-area: 1 / 1 / 2 / 7;
     }
     
-    .gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2{
+    .gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2, .gridx12__courseItemDetail--col2of2{
         grid-area: 1 / 7 / 2 / 13;
     }
 }
@@ -69,8 +70,8 @@
         margin: 0 2*$basicWidth;
     }
 
-    .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2,
-    .gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2 {
+    .gridx12__threeToOne--col1of2, .gridx12__twoToOne--col1of2, .gridx12__oneToOne--col1of2, .gridx12__courseItemDetail--col1of2
+    .gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2, .gridx12__courseItemDetail--col2of2 {
     padding: $basicHeight $basicWidth;
 }
 
@@ -105,11 +106,15 @@
         |  col1of2   |  col2of2   |
         |            |            |
     */
-    .gridx12__oneToOne--col1of2{
+    .gridx12__oneToOne--col1of2, .gridx12__courseItemDetail--col1of2{
 		grid-area: 1 / 1 / 2 / 7;
 	}
 
-	.gridx12__oneToOne--col2of2{
+	.gridx12__oneToOne--col2of2, .gridx12__courseItemDetail--col2of2{
 		grid-area: 1 / 7 / 2 / 13;
+	}
+
+    .content-at-the-end{
+		align-self: end;
 	}
 }

@@ -11,9 +11,20 @@ const App = (function () {
     Navigation.init();
 
     // alle Kursdaten laden
-    Courses.loadAndRender()
-    .then(() => {
-      console.log('Kurse geladen');
+    Courses.getAllCourses()
+    .then((courses) => {
+      // console.log('Kurse geladen');
+      // console.log(JSON.stringify(courses));
+
+      let nextCourse = Courses.getNextCourse(courses, ['Kanukurs', 'Eskimotieren'], ['Kajak', 'alle']);
+      CourseHandling.renderNextCourse(nextCourse, 'course', 'joyofwhitewater');
+      // console.log('nextCourse: ' + JSON.stringify(nextCourse));
+
+      let nextPaddleJourney = Courses.getNextCourse(courses, ['Paddelreise'], ['Kajak', 'alle']);
+      CourseHandling.renderNextCourse(nextPaddleJourney, 'journey', 'joyofwhitewater');
+      // console.log('nextPaddleJourney: ' + JSON.stringify(nextPaddleJourney));
+
+      CourseHandling.init();
     })
     .catch((error) => {
       console.log(error);

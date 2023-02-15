@@ -11,8 +11,12 @@ $standardTextFont: "Alegreya Sans", "Arial", "sans-serif";
 
 /*** colors ***/
 $standardTextColor: #000000;
+$tableBackgroundColor: #ADAB9C;
+$tableColorFrom: #3E74FA;
+$tableColorTo: #8AAAFB;
 $standardBackgroundColor: #FFFFFF;
-$textContainerColor: #E6F1F2;
+$textContainerColor: #DDDDDD;// #E6F1F2;
+$color-textContainer-titleH4: #000000;
 $titleBackgroundColor: rgba($standardBackgroundColor, 0.8);
 $navBackgroundColor: $standardBackgroundColor;
 $footerBackgroundColor:  #000000;
@@ -28,6 +32,7 @@ $basicWidth: 8px;
 $basicHeight: 8px;
 $textSize: 1rem;
 $titleSize: 3.0rem;
+$smallTitleSize: 1.5rem;
 $navigationSize: 1.5rem;
 $heightHeader: 7*$basicHeight;
 $heightNavigation: 7*$basicHeight;
@@ -90,6 +95,13 @@ $heightNavigation: 7*$basicHeight;
 }
 
 @mixin offersLinkTextFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+@mixin courseItemFont(){
 	color: $standardTextColor;
 	font-family: $standardTextFont;
 	font-size: 1.3rem;

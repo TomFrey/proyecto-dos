@@ -1,0 +1,195 @@
+section.text-item .gridx12{
+
+    .course-item-wrapper{
+        background-color: $tableBackgroundColor;
+        padding: 2*$basicHeight;
+        margin: $basicHeight 0;
+        border-radius: $basicHeight;
+    }
+
+    .course-item{
+        @include courseItemFont();
+        //background-color: red;
+
+        background: linear-gradient(-45deg, $tableColorFrom, $tableColorTo);
+       
+
+        display: flex;
+        flex-flow: row nowrap;
+        text-decoration: none;
+    }
+
+
+    // Name
+    .course-item__name-wrapper{
+        border-right: 0.5*$basicWidth solid $tableBackgroundColor;
+        flex: 2 2 40%;
+        padding: 2*$basicHeight $basicWidth;
+    }
+    
+    .course-item__name{
+        @include courseItemFont();
+        padding: 0;
+        pointer-events: none;
+    }
+    
+    
+    // Ort
+    .course-item__place-wrapper{
+        border-right: 0.5*$basicWidth solid $tableBackgroundColor;
+        flex: 1 1 20%;
+        padding: 2*$basicHeight 0;
+    }
+    
+    .course-item__place{
+        padding: 0 $basicWidth;
+        pointer-events: none;
+    }
+    
+    .course-place__city::after{
+        content: ', ';
+    }
+    
+    
+    // Dauer
+    .course-item__duration-wrapper{
+        display: none;
+    }
+    
+    .course-item__duration{
+        pointer-events: none;
+    }
+    
+    
+    // Datum
+    .course-item__date-wrapper{
+        flex: 1 1 20%;
+        padding: 2*$basicHeight 0;
+    }
+    
+    .course-item__date{
+        padding: 0 $basicWidth;
+        pointer-events: none;
+    }
+    
+    .course-date__from::after{
+        content: ' - ';
+    }
+
+
+
+    .course-item-detail{
+        @include courseItemFont();
+        background: linear-gradient(-45deg, $tableColorFrom, $tableColorTo);
+        //background-color: $color-drawer-background-dateTable;
+        margin-top: 0.5*$basicHeight;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 300ms ease-in-out 1ms;
+
+        .gridx12__oneToOne--col1of2, .gridx12__oneToOne--col2of2{
+            //background: linear-gradient(-45deg, $tableColorFrom, $tableColorTo);
+        }
+
+        li{
+            margin-bottom: 0.5*$basicHeight;
+        }
+    }
+    
+    .course-item-detail.js-show{
+        max-height: 2000px;
+        transition: max-height 300ms ease-in-out 1ms;
+    }
+    
+    .course-item-detail__content-wrapper{
+        padding: 2*$basicHeight 2*$basicWidth;
+    }
+
+    h4.course-detail__title{
+        font-family: $standardTextFont;
+        font-size: $smallTitleSize;
+        font-weight: bold;
+        color: $color-textContainer-titleH4;
+        line-height: 1.5rem;
+        padding-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    h4.course-detail__title::after{
+        content: ':';
+    }
+    
+    .course-detail__amount--part, .course-detail__amount--total{
+        margin-right: $basicWidth;
+        //padding-top: 0.5*$basicHeight;
+        text-align: right;
+    }
+    
+    .course-detail__amount--total{
+        border-top: black solid 1px;
+        font-weight: bold;
+    }
+    
+    .course-detail__amount--part::after, .course-detail__amount--total::after{
+        content: ' CHF';
+    }
+    
+
+}
+
+
+
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+
+    section.text-item .gridx12{
+         // Dauer
+        .course-item__duration-wrapper{
+            border-right: 0.5*$basicWidth solid $tableBackgroundColor;
+            display: block;
+            flex: 1 1 10%;
+            padding: 2*$basicHeight 0;
+        }
+
+        .course-item__duration{
+            padding: 0 $basicWidth;
+        }
+    }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+    section.text-item .gridx12{
+        
+        // Name
+        .course-item__name-wrapper{
+            border-right: $basicWidth solid $tableBackgroundColor;
+        }
+        
+        // Ort
+        .course-item__place-wrapper{
+            border-right: $basicWidth solid $tableBackgroundColor;
+        }
+    
+        // Dauer
+        .course-item__duration-wrapper{
+            border-right: $basicWidth solid $tableBackgroundColor;
+        }
+   }
+
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+    
+
+}
+
+    
+    
