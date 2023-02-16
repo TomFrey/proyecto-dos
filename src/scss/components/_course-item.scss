@@ -127,6 +127,13 @@ section.text-item .gridx12{
     h4.course-detail__title::after{
         content: ':';
     }
+
+    .link-in-courseItemDetail{
+        font-family: $standardTextFont;
+        color: $standardBackgroundColor;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
     
     .course-detail__amount--part, .course-detail__amount--total{
         margin-right: $basicWidth;
@@ -198,6 +205,10 @@ section.text-item .gridx12{
 
         div.course-item-icon + p{
             margin-top: 2*$basicHeight;
+        }
+
+        .link-in-courseItemDetail:hover{
+            color: $standardTextColor;
         }
    }
 }

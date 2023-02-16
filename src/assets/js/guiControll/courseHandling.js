@@ -286,7 +286,7 @@ const CourseHandling = (function (Courses) {
             if (courseDate.typ === 'Paddelreise'){
                 const url = 'https://joyofwhitewater.ch/paddelreisen.html';
                 const detailsLink = document.createElement('a');
-                detailsLink.classList.add('link-in-text');
+                detailsLink.classList.add('link-in-courseItemDetail');
                 detailsLink.setAttribute('target', '_blank');
     
                 switch (courseDate.paddelreiseGruppe) {
