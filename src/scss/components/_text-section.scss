@@ -25,6 +25,14 @@ section.text-item{
     strong{
         font-weight: bold;
     }
+
+    p.maps{
+
+        iframe{
+            width: 100%; 
+            height: 300px;
+        }
+    }
 }
 
 .bild-text-container{
