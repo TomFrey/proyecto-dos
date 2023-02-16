@@ -2,18 +2,27 @@ section.text-item .gridx12{
 
     .course-item-wrapper{
         background-color: $tableBackgroundColor;
-        padding: 2*$basicHeight;
-        margin: $basicHeight 0;
+        padding: $basicHeight;
+        margin-top: $basicHeight;
         border-radius: $basicHeight;
+    }
+
+    .course-item-icon{
+        margin: 0 auto $basicHeight auto;
+        width: 0px;
+        height: 0px;
+        -webkit-transform: rotate(360deg);
+        border-style: solid;
+        border-width: 12px 25px 0 25px;
+        border-color: $tableBackgroundColor transparent transparent transparent;
+    }
+    .course-item-icon.js-hide{
+        display: none;
     }
 
     .course-item{
         @include courseItemFont();
-        //background-color: red;
-
         background: linear-gradient(-45deg, $tableColorFrom, $tableColorTo);
-       
-
         display: flex;
         flex-flow: row nowrap;
         text-decoration: none;
@@ -133,8 +142,10 @@ section.text-item .gridx12{
     .course-detail__amount--part::after, .course-detail__amount--total::after{
         content: ' CHF';
     }
-    
 
+    div.course-item-icon + p{
+        margin-top: $basicHeight;
+    }
 }
 
 
@@ -164,6 +175,11 @@ section.text-item .gridx12{
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
     section.text-item .gridx12{
+
+        .course-item:hover{
+            background: linear-gradient(-45deg, $tableColorTo, white);
+            font-weight: 400;
+        }
         
         // Name
         .course-item__name-wrapper{
@@ -179,8 +195,11 @@ section.text-item .gridx12{
         .course-item__duration-wrapper{
             border-right: $basicWidth solid $tableBackgroundColor;
         }
-   }
 
+        div.course-item-icon + p{
+            margin-top: 2*$basicHeight;
+        }
+   }
 }
 
 

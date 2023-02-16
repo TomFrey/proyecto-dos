@@ -53,6 +53,10 @@
     .gridx12__threeToOne--col2of2, .gridx12__twoToOne--col2of2, .gridx12__oneToOne--col2of2, .gridx12__courseItemDetail--col2of2{
         grid-area: 1 / 7 / 2 / 13;
     }
+
+    .content-at-the-end{
+		align-self: end;
+	}
 }
 
 
@@ -114,7 +118,8 @@
 		grid-area: 1 / 7 / 2 / 13;
 	}
 
-    .content-at-the-end{
-		align-self: end;
-	}
+    
+    .gridx12__oneCol--col1of1 {
+        padding: $basicHeight $basicWidth;
+    }
 }

@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 const CourseHandling = (function (Courses) {
 	const SHOW = 'js-show';
+    const HIDE = 'js-hide';
 
     let courseItems;
     let registerButtons;
@@ -12,7 +13,11 @@ const CourseHandling = (function (Courses) {
      * @param {*} event 
      */
     function goToRegisterForm(event){
-        const registerButtonWrapper = event.parentElement.parentElement;
+        
+        console.log('event: '+event.parentElement);
+        console.log('id: '+event.parentElement.getAttribute('id'));
+
+        const registerButtonWrapper = event.parentElement;
         const courseId = registerButtonWrapper.getAttribute('id');
         let url;
 
@@ -356,11 +361,14 @@ const CourseHandling = (function (Courses) {
 
 	function toggleCourseDetails(event) {
 		const drawer = event.parentElement.parentElement.lastElementChild;
+        const courseItemIcon = event.parentElement.parentElement.nextSibling.nextSibling;
 
 		if (drawer.classList.contains(SHOW)) {
 			drawer.classList.remove(SHOW);
+            courseItemIcon.classList.remove(HIDE);
 		} else {
 			drawer.classList.add(SHOW);
+            courseItemIcon.classList.add(HIDE);
 		}
 	}
 
@@ -382,7 +390,7 @@ const CourseHandling = (function (Courses) {
 					goToRegisterForm(event.target);
 				});
 			});
-		}
+		}		
 	}
 
 

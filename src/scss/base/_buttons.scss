@@ -10,6 +10,7 @@
     transition: all 0.2s ease;
     border: none;
     background: none;
+    cursor: pointer;
    }
    
    .register-button:before {
@@ -19,24 +20,18 @@
     left: 0;
     display: block;
     border-radius: 50px;
-    background: #ffffff; //#b1dae7;
-    width: 65px;
+    background: $standardBackgroundColor;
+    width: 100%;
     height: 65px;
-    transition: all 0.3s ease;
    }
    
    .register-button span {
-
+    position: relative;
     font-family: $standardTextFont;
     font-size: $smallTitleSize;
     font-weight: bold;
-
-    position: relative;
-    // font-family: "Ubuntu", sans-serif;
-    // font-size: 18px;
-    // font-weight: 700;
     letter-spacing: 0.05em;
-    color: #000000; //#234567;
+    color: $standardTextColor;
    }
    
    .register-button svg {
@@ -46,21 +41,56 @@
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: #000000; //#234567;
+    stroke: $standardTextColor;
     stroke-width: 2;
     transform: translateX(-5px);
     transition: all 0.3s ease;
    }
    
-   .register-button:hover:before {
-    width: 100%;
-    background: #ffffff; //#b1dae7;
-   }
-   
-   .register-button:hover svg {
-    transform: translateX(0);
-   }
-   
    .register-button:active {
     transform: scale(0.95);
    }
+
+   //Alle Elemente innerhalb des Button haben keine pointer events.
+   //Somit kommen alle events nur vom Button als gesamtes.
+   .register-button > * {
+    pointer-events: none;
+   }
+
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+   
+    .register-button:before {
+        width: 65px;
+        transition: all 0.3s ease;
+    }
+
+    .register-button:hover:before {
+        width: 100%;
+        background: $standardBackgroundColor;
+    }
+       
+    .register-button:hover svg {
+        transform: translateX(0);
+    }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+    
+
+}
+
+    
+    
