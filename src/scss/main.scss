@@ -168,6 +168,35 @@ footer{
   a{
     color: $footerTextColor;
   }
+
+  .contact-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 150px;
+    margin: $basicHeight $basicWidth;
+
+  }
+
+  .contact-address{
+
+  }
+
+  .contact-logo{
+    margin-top: 2*$basicHeight;
+    width: 80%;
+    img{
+      width: 100%;
+    }
+  }
+
+  .contact-logo.joy{
+    width: 50%;
+    img{
+      width: 100%;
+    }
+  }
 }
 
 footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
@@ -268,7 +297,33 @@ footer .gridx12__oneToOne--col1of2, footer .gridx12__oneToOne--col2of2{
     li a:hover{
       color: darken($footerTextColor, 25%);
     }
+
+    .contact-wrapper{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 150px;
+      margin: $basicHeight $basicWidth;
+  
+    }
+
+    .contact-logo{
+      width: unset;
+      img{
+        width: unset;
+      }
+    }
+
+    .contact-logo.joy{
+      width: unset;
+      img{
+        width: unset;
+      }
+    }
   }
+
+  
 }
 
 
