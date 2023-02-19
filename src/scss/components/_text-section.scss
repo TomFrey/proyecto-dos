@@ -39,6 +39,7 @@ section.text-item{
     display: flex;
     flex-flow: column nowrap;
     gap: 2%;
+    margin-bottom: 2*$basicHeight;
 }
 
 .bild-text-container-left{

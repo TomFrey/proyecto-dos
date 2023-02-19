@@ -62,14 +62,14 @@ $heightNavigation: 7*$basicHeight;
 @mixin pageTitleH2TextFont(){
 	color: $standardTextColor;
 	font-family: $standardTextFont;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	font-weight: 500;
 }
 
 @mixin pageTitleH3TextFont(){
 	color: $standardTextColor;
 	font-family: $standardTextFont;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 400;
 }
 
