@@ -233,8 +233,8 @@ const allJsFiles = [
  */
  function replaceProductionCredentials(){
 	return gulp.src(['./src/api/database/DB.php'])
-		.pipe(replace('rootuser', configFile.config.productionDB.user))
-		.pipe(replace('rootpw', configFile.config.productionDB.pass))
+		.pipe(replace('rootuser', configFile.config.productionDBJoy.user))
+		.pipe(replace('rootpw', configFile.config.productionDBJoy.pass))
 		.pipe(gulp.dest('dist/api/database'));
 }
 

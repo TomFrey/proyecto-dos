@@ -32,6 +32,7 @@ const CourseHandling = (function (Courses) {
 			url = 'http://www.outdoor-engadin.ch/index.php?id=69';
 		}
 
+        console.log('currentCourse: ' + JSON.stringify(currentCourse));
         window.open(url + '?name=' + currentCourse[0].name + '&vonDatum=' + currentCourse[0].vonDatum);
     }
 
