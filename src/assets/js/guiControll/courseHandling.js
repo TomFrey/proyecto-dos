@@ -13,17 +13,15 @@ const CourseHandling = (function (Courses) {
      * @param {*} event 
      */
     function goToRegisterForm(event){
-        
-        console.log('event: '+event.parentElement);
-        console.log('id: '+event.parentElement.getAttribute('id'));
-
         const registerButtonWrapper = event.parentElement;
         const courseId = registerButtonWrapper.getAttribute('id');
         let url;
+        //console.log('courseId: ' + courseId);
+        //console.log('allCourses: ' + JSON.stringify(Courses.getCoursesFromStaticStorage()));
 
         //Den Kurs mit der entsprechenden courseId aus dem statischen Speicher holen.
         const currentCourse = Courses.getCoursesFromStaticStorage().filter((course) => {
-            return course.id === courseId;
+            return course.id == courseId;    //ACHTUNG: '==' ist Absicht -> eine Id ist eine Nummer und eine Id ist ein String
         });
 
         if (registerButtonWrapper.getAttribute('db') === 'joyofwhitewater') {
@@ -32,7 +30,7 @@ const CourseHandling = (function (Courses) {
 			url = 'http://www.outdoor-engadin.ch/index.php?id=69';
 		}
 
-        console.log('currentCourse: ' + JSON.stringify(currentCourse));
+        //console.log('currentCourse: ' + JSON.stringify(currentCourse[0]));
         window.open(url + '?name=' + currentCourse[0].name + '&vonDatum=' + currentCourse[0].vonDatum);
     }
 
